@@ -8,9 +8,8 @@
 import Foundation
 
 protocol SignatureProtocol {
-    static func signData(priv: PrivateKey, message: String) -> Data
-    static func verifySignature(realSig: Data, message: String, publicKey: PublicKey) -> Bool
-    static func printSignature(signature: Signature)
+    func signData(publicKey: PublicKey, message: String) -> Data?
+    func verifySignature(realSig: Data, message: String, priv: PrivateKey) -> Bool
 }
 
 final class Signature {
@@ -18,17 +17,31 @@ final class Signature {
 }
 
 extension Signature: SignatureProtocol {
-    static func signData(priv: PrivateKey, message: String) -> Data {
-        return Data()
-    }
     
-    static func verifySignature(realSig: Data, message: String, publicKey: PublicKey) -> Bool {
-        return false
-    }
-    
-    static func printSignature(signature: Signature) {
+    func signData(publicKey: PublicKey, message: String) -> Data? {
+        let messageData = message.data(using: .utf8)!
+        guard let cipheredData = SecKeyCreateEncryptedData(publicKey,
+                                                         .rsaEncryptionOAEPSHA512,
+                                                           messageData as CFData,
+                                                         nil) as Data? else {
+            return nil
+        }
         
+        return cipheredData
     }
     
+    func verifySignature(realSig: Data, message: String, priv: PrivateKey) -> Bool {
+        
+        guard let clearTextData = SecKeyCreateDecryptedData(priv,
+                                                            .rsaEncryptionOAEPSHA512,
+                                                            realSig as CFData,
+                                                            nil) as Data? else {
+            return false
+        }
+
+        guard let resultText = String(data: clearTextData, encoding: .utf8) else { return false }
+        
+        return message == resultText
+    }
     
 }

@@ -8,28 +8,30 @@
 import Foundation
 
 protocol KeyPairProtocol {
-    var privateKey: SecKey? { get }
-    var publicKey: SecKey? { get }
+    var privateKey: PrivateKey? { get }
+    var publicKey: PublicKey? { get }
     
     func genKeyPair()
 }
+
+typealias PublicKey = SecKey
+typealias PrivateKey = SecKey
 
 final class KeyPair {
     
 }
 
 extension KeyPair: KeyPairProtocol {
-    var privateKey: SecKey? {
+    var privateKey: PrivateKey? {
         get {
             return fetchPrivateKey()
         }
     }
     
-    var publicKey: SecKey? {
+    var publicKey: PublicKey? {
         get {
             return fetchPublicKey()
         }
-       
     }
     
     func genKeyPair() {
@@ -37,41 +39,11 @@ extension KeyPair: KeyPairProtocol {
             print("Internal error - createPrivateKey failed")
         }
     }
-    
-    func test() {
-        let testText = "KeyPair::test"
-        guard let safePublicKey = publicKey else { return }
-        guard let safePrivateKey = privateKey else { return }
-        let textToEncryptData = testText.data(using: .utf8)!
-
-        // encrypt
-        guard let cipherText = SecKeyCreateEncryptedData(safePublicKey,
-                                                         .rsaEncryptionOAEPSHA512,
-                                                         textToEncryptData as CFData,
-                                                         nil) as Data? else {
-            return
-        }
-        
-        // decrypt
-        guard let clearTextData = SecKeyCreateDecryptedData(safePrivateKey,
-                                                            .rsaEncryptionOAEPSHA512,
-                                                            cipherText as CFData,
-                                                            nil) as Data? else {
-            return
-        }
-
-        guard let resultText = String(data: clearTextData, encoding: .utf8) else { return }
-        if resultText == testText {
-            print("KeyPair::test OK")
-        } else {
-            print("KeyPair::test FAILED")
-        }
-    }
 }
 
 private extension KeyPair {
     
-    func fetchPublicKey() -> SecKey? {
+    func fetchPublicKey() -> PublicKey? {
         guard let privateKey = fetchPrivateKey() else { return nil }
         guard let publicKey = SecKeyCopyPublicKey(privateKey),
               let _ = SecKeyCopyExternalRepresentation(publicKey, nil) else {
@@ -87,13 +59,12 @@ private extension KeyPair {
         return publicKey
     }
     
-    
     func getTag() -> Data? {
         let bundleID = Bundle.main.bundleIdentifier
         return bundleID?.data(using: .utf8)
     }
     
-    func fetchPrivateKey() -> SecKey? {
+    func fetchPrivateKey() -> PrivateKey? {
         guard let tag = getTag() else { return nil }
         let query: CFDictionary = [kSecClass as String: kSecClassKey,
                                    kSecAttrApplicationTag as String: tag,
@@ -105,10 +76,10 @@ private extension KeyPair {
         guard status == errSecSuccess else {
             _ = createPrivateKey()
             status = SecItemCopyMatching(query, &item)
-            return (item as! SecKey)
+            return (item as! PrivateKey)
         }
 
-        return (item as! SecKey)
+        return (item as! PrivateKey)
     }
     
     func createPrivateKey() -> Bool {

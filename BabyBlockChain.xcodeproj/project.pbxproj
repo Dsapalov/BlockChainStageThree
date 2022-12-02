@@ -15,10 +15,8 @@
 		B6E65AEA2939A94800367200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E65AE82939A94800367200 /* LaunchScreen.storyboard */; };
 		B6E65AFC2939A99800367200 /* KeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF22939A99800367200 /* KeyPair.swift */; };
 		B6E65AFD2939A99800367200 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF32939A99800367200 /* Hash.swift */; };
-		B6E65AFE2939A99800367200 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF42939A99800367200 /* PublicKey.swift */; };
 		B6E65AFF2939A99800367200 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF52939A99800367200 /* Block.swift */; };
 		B6E65B002939A99800367200 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF62939A99800367200 /* Signature.swift */; };
-		B6E65B012939A99800367200 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF72939A99800367200 /* PrivateKey.swift */; };
 		B6E65B022939A99800367200 /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF82939A99800367200 /* Blockchain.swift */; };
 		B6E65B032939A99800367200 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF92939A99800367200 /* Transaction.swift */; };
 		B6E65B042939A99800367200 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AFA2939A99800367200 /* Account.swift */; };
@@ -36,10 +34,8 @@
 		B6E65AEB2939A94800367200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6E65AF22939A99800367200 /* KeyPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPair.swift; sourceTree = "<group>"; };
 		B6E65AF32939A99800367200 /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
-		B6E65AF42939A99800367200 /* PublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
 		B6E65AF52939A99800367200 /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		B6E65AF62939A99800367200 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
-		B6E65AF72939A99800367200 /* PrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
 		B6E65AF82939A99800367200 /* Blockchain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
 		B6E65AF92939A99800367200 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		B6E65AFA2939A99800367200 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -93,10 +89,8 @@
 			children = (
 				B6E65AF22939A99800367200 /* KeyPair.swift */,
 				B6E65AF32939A99800367200 /* Hash.swift */,
-				B6E65AF42939A99800367200 /* PublicKey.swift */,
 				B6E65AF52939A99800367200 /* Block.swift */,
 				B6E65AF62939A99800367200 /* Signature.swift */,
-				B6E65AF72939A99800367200 /* PrivateKey.swift */,
 				B6E65AF82939A99800367200 /* Blockchain.swift */,
 				B6E65AF92939A99800367200 /* Transaction.swift */,
 				B6E65AFA2939A99800367200 /* Account.swift */,
@@ -183,9 +177,7 @@
 				B6E65AFC2939A99800367200 /* KeyPair.swift in Sources */,
 				B6E65B042939A99800367200 /* Account.swift in Sources */,
 				B6E65B002939A99800367200 /* Signature.swift in Sources */,
-				B6E65B012939A99800367200 /* PrivateKey.swift in Sources */,
 				B6E65ADE2939A94500367200 /* AppDelegate.swift in Sources */,
-				B6E65AFE2939A99800367200 /* PublicKey.swift in Sources */,
 				B6E65B052939A99800367200 /* Operation.swift in Sources */,
 				B6E65AE02939A94500367200 /* SceneDelegate.swift in Sources */,
 				B6E65B022939A99800367200 /* Blockchain.swift in Sources */,
