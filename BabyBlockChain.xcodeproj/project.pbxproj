@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B6E65ADE2939A94500367200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65ADD2939A94500367200 /* AppDelegate.swift */; };
+		B6E65AE02939A94500367200 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65ADF2939A94500367200 /* SceneDelegate.swift */; };
+		B6E65AE22939A94500367200 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AE12939A94500367200 /* ViewController.swift */; };
+		B6E65AE52939A94500367200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E65AE32939A94500367200 /* Main.storyboard */; };
+		B6E65AE72939A94800367200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6E65AE62939A94800367200 /* Assets.xcassets */; };
+		B6E65AEA2939A94800367200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6E65AE82939A94800367200 /* LaunchScreen.storyboard */; };
+		B6E65AFC2939A99800367200 /* KeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF22939A99800367200 /* KeyPair.swift */; };
+		B6E65AFD2939A99800367200 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF32939A99800367200 /* Hash.swift */; };
+		B6E65AFE2939A99800367200 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF42939A99800367200 /* PublicKey.swift */; };
+		B6E65AFF2939A99800367200 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF52939A99800367200 /* Block.swift */; };
+		B6E65B002939A99800367200 /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF62939A99800367200 /* Signature.swift */; };
+		B6E65B012939A99800367200 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF72939A99800367200 /* PrivateKey.swift */; };
+		B6E65B022939A99800367200 /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF82939A99800367200 /* Blockchain.swift */; };
+		B6E65B032939A99800367200 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AF92939A99800367200 /* Transaction.swift */; };
+		B6E65B042939A99800367200 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AFA2939A99800367200 /* Account.swift */; };
+		B6E65B052939A99800367200 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E65AFB2939A99800367200 /* Operation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B6E65ADA2939A94500367200 /* BabyBlockChain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyBlockChain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6E65ADD2939A94500367200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B6E65ADF2939A94500367200 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B6E65AE12939A94500367200 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B6E65AE42939A94500367200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B6E65AE62939A94800367200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6E65AE92939A94800367200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B6E65AEB2939A94800367200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E65AF22939A99800367200 /* KeyPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPair.swift; sourceTree = "<group>"; };
+		B6E65AF32939A99800367200 /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
+		B6E65AF42939A99800367200 /* PublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
+		B6E65AF52939A99800367200 /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		B6E65AF62939A99800367200 /* Signature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
+		B6E65AF72939A99800367200 /* PrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
+		B6E65AF82939A99800367200 /* Blockchain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
+		B6E65AF92939A99800367200 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		B6E65AFA2939A99800367200 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		B6E65AFB2939A99800367200 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B6E65AD72939A94500367200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B6E65AD12939A94500367200 = {
+			isa = PBXGroup;
+			children = (
+				B6E65ADC2939A94500367200 /* BabyBlockChain */,
+				B6E65ADB2939A94500367200 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B6E65ADB2939A94500367200 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6E65ADA2939A94500367200 /* BabyBlockChain.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B6E65ADC2939A94500367200 /* BabyBlockChain */ = {
+			isa = PBXGroup;
+			children = (
+				B6E65AF12939A99800367200 /* Core */,
+				B6E65ADD2939A94500367200 /* AppDelegate.swift */,
+				B6E65ADF2939A94500367200 /* SceneDelegate.swift */,
+				B6E65AE12939A94500367200 /* ViewController.swift */,
+				B6E65AE32939A94500367200 /* Main.storyboard */,
+				B6E65AE62939A94800367200 /* Assets.xcassets */,
+				B6E65AE82939A94800367200 /* LaunchScreen.storyboard */,
+				B6E65AEB2939A94800367200 /* Info.plist */,
+			);
+			path = BabyBlockChain;
+			sourceTree = "<group>";
+		};
+		B6E65AF12939A99800367200 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B6E65AF22939A99800367200 /* KeyPair.swift */,
+				B6E65AF32939A99800367200 /* Hash.swift */,
+				B6E65AF42939A99800367200 /* PublicKey.swift */,
+				B6E65AF52939A99800367200 /* Block.swift */,
+				B6E65AF62939A99800367200 /* Signature.swift */,
+				B6E65AF72939A99800367200 /* PrivateKey.swift */,
+				B6E65AF82939A99800367200 /* Blockchain.swift */,
+				B6E65AF92939A99800367200 /* Transaction.swift */,
+				B6E65AFA2939A99800367200 /* Account.swift */,
+				B6E65AFB2939A99800367200 /* Operation.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B6E65AD92939A94500367200 /* BabyBlockChain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6E65AEE2939A94800367200 /* Build configuration list for PBXNativeTarget "BabyBlockChain" */;
+			buildPhases = (
+				B6E65AD62939A94500367200 /* Sources */,
+				B6E65AD72939A94500367200 /* Frameworks */,
+				B6E65AD82939A94500367200 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BabyBlockChain;
+			productName = BabyBlockChain;
+			productReference = B6E65ADA2939A94500367200 /* BabyBlockChain.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B6E65AD22939A94500367200 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					B6E65AD92939A94500367200 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = B6E65AD52939A94500367200 /* Build configuration list for PBXProject "BabyBlockChain" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B6E65AD12939A94500367200;
+			productRefGroup = B6E65ADB2939A94500367200 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B6E65AD92939A94500367200 /* BabyBlockChain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B6E65AD82939A94500367200 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6E65AEA2939A94800367200 /* LaunchScreen.storyboard in Resources */,
+				B6E65AE72939A94800367200 /* Assets.xcassets in Resources */,
+				B6E65AE52939A94500367200 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B6E65AD62939A94500367200 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6E65B032939A99800367200 /* Transaction.swift in Sources */,
+				B6E65AFD2939A99800367200 /* Hash.swift in Sources */,
+				B6E65AFF2939A99800367200 /* Block.swift in Sources */,
+				B6E65AE22939A94500367200 /* ViewController.swift in Sources */,
+				B6E65AFC2939A99800367200 /* KeyPair.swift in Sources */,
+				B6E65B042939A99800367200 /* Account.swift in Sources */,
+				B6E65B002939A99800367200 /* Signature.swift in Sources */,
+				B6E65B012939A99800367200 /* PrivateKey.swift in Sources */,
+				B6E65ADE2939A94500367200 /* AppDelegate.swift in Sources */,
+				B6E65AFE2939A99800367200 /* PublicKey.swift in Sources */,
+				B6E65B052939A99800367200 /* Operation.swift in Sources */,
+				B6E65AE02939A94500367200 /* SceneDelegate.swift in Sources */,
+				B6E65B022939A99800367200 /* Blockchain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B6E65AE32939A94500367200 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6E65AE42939A94500367200 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B6E65AE82939A94800367200 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6E65AE92939A94800367200 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B6E65AEC2939A94800367200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B6E65AED2939A94800367200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B6E65AEF2939A94800367200 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BabyBlockChain/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.BabyBlockChain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6E65AF02939A94800367200 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BabyBlockChain/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.BabyBlockChain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B6E65AD52939A94500367200 /* Build configuration list for PBXProject "BabyBlockChain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6E65AEC2939A94800367200 /* Debug */,
+				B6E65AED2939A94800367200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6E65AEE2939A94800367200 /* Build configuration list for PBXNativeTarget "BabyBlockChain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6E65AEF2939A94800367200 /* Debug */,
+				B6E65AF02939A94800367200 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B6E65AD22939A94500367200 /* Project object */;
+}
