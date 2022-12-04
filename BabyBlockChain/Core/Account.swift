@@ -8,100 +8,79 @@
 import Foundation
 
 protocol AccountProtocol {
-    var accountID: String { get set }
-    var wallet: [KeyPair]  { get set }
-    var balance: Int  { get set }
+    var accountID: String { get }
 
-    static func genAccount() -> Account
-    static func addKeyPairToWallet(keyPair: KeyPair)
-    static func updateBalance(balance: Int)
-    static func getBalance() -> Int
-    static func printBalance()
-    static func signData(message: String, index: Int) -> Data
-    static func createOperation(recipient: Account, amount: Int, index: IndexPath) -> Operation
-    func toString() -> String
-    func print()
+    func addKeyPairToWallet(keyPair: KeyPair)
+    func updateBalance(balance: Int)
+    func getBalance() -> Int
+    func printBalance()
+    func signData(message: String, index: Int) -> Data?
+    func createOperation(recipient: Account, amount: Int, index: IndexPath) -> Operation
 }
 
 final class Account: Hashable {
+    
+    var wallet = [KeyPair]()
+    var balance: Int = 0
+    
     static func == (lhs: Account, rhs: Account) -> Bool {
         return lhs.accountID != rhs.accountID
     }
-    
    
     func hash(into hasher: inout Hasher) {
         hasher.combine(accountID)
     }
     
-    
+    init() {
+        let keyPair = KeyPair()
+        wallet.append(keyPair)
+    }
     
 }
 
 extension Account: AccountProtocol {
+    
+    /**
+        Returns accountId
+        - can return empty string if occurs internal error(SecKey not allowed/not supported
+     */
     var accountID: String {
         get {
-            return accountID
-        }
-        set {
-            
-        }
-    }
-    
-    var wallet: [KeyPair] {
-        get {
-            return wallet
-        }
-        set {
-            
+            guard let publicKey = wallet.first?.publicKey else { return "" }
+            if let cfdata = SecKeyCopyExternalRepresentation(publicKey, nil) {
+               let data:Data = cfdata as Data
+               return data.base64EncodedString()
+            }
+            return ""
         }
     }
-    
-    var balance: Int {
-        get {
-            return balance
-        }
-        set {
-            
-        }
+
+    func addKeyPairToWallet(keyPair: KeyPair) {
+        wallet.append(keyPair)
     }
     
-    static func genAccount() -> Account {
-        Account()
+    func updateBalance(balance: Int) {
+        self.balance += balance
     }
     
-    static func addKeyPairToWallet(keyPair: KeyPair) {
-        
+    func getBalance() -> Int {
+        return balance
     }
     
-    static func updateBalance(balance: Int) {
-        
+    func printBalance() {
+        print("Account balance: \(balance)")
     }
     
-    static func getBalance() -> Int {
-        return 0
+    func signData(message: String, index: Int) -> Data? {
+        let signature = Signature()
+        guard wallet.count <= index else { return nil }
+        guard let actualPublicKey = wallet[index].publicKey else { return nil }
+        return signature.signData(publicKey: actualPublicKey, message: message)
     }
     
-    static func printBalance() {
-        
-    }
-    
-    static func signData(message: String, index: Int) -> Data {
-        return Data()
-    }
-    
-    static func createOperation(recipient: Account, amount: Int, index: IndexPath) -> Operation {
+    func createOperation(recipient: Account, amount: Int, index: IndexPath) -> Operation {
+        // TODO: will be implemented on stage #4
         Operation()
     }
-    
-    func toString() -> String {
-        "---"
-    }
-    
-    func print() {
-        
-    }
-    
-
-    
     
 }

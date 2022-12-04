@@ -8,10 +8,10 @@
 import Foundation
 
 protocol KeyPairProtocol {
+    
     var privateKey: PrivateKey? { get }
     var publicKey: PublicKey? { get }
     
-    func genKeyPair()
 }
 
 typealias PublicKey = SecKey
@@ -19,6 +19,11 @@ typealias PrivateKey = SecKey
 
 final class KeyPair {
     
+    init() {
+        if createPrivateKey() == false {
+            print("Internal error - createPrivateKey failed")
+        }
+    }
 }
 
 extension KeyPair: KeyPairProtocol {
@@ -34,11 +39,6 @@ extension KeyPair: KeyPairProtocol {
         }
     }
     
-    func genKeyPair() {
-        if createPrivateKey() == false {
-            print("Internal error - createPrivateKey failed")
-        }
-    }
 }
 
 private extension KeyPair {
