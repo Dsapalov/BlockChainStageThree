@@ -28,4 +28,4 @@
     Базовий рівень роботи з крипто гаманцями(Trust wallet)
 
 2) Added KeyPair & Signature implementation
-3) Account - in progress
+3) Added Account class implementation
